@@ -29,6 +29,43 @@ namespace Assignment_2_Unit_35
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            double SR1, SR2, SR3;
+            //shows when each text box is being used in each set of code//
+
+            try
+            {
+                SR1 = double.Parse(textBox5.Text);
+            }
+            catch
+            {
+                MessageBox.Show(" not correct value");
+                SR1 = 0.0;
+                //if answer is not a whole number it will not be seen and will be an error//
+            }
+            try
+            {
+                SR2 = double.Parse(textBox6.Text);
+            }
+            catch
+            {
+                MessageBox.Show(" not correct value");
+                SR2 = 0.0;
+                //if answer is not whole number it will not be seen and will be an error//
+            }
+            try
+            {
+                SR3 = double.Parse(textBox7.Text);
+            }
+            catch
+            {
+                MessageBox.Show(" not correct value");
+                SR3 = 0.0;
+                //if answer is not whole number it will not be seen and will be an error//
+            }
+
+            double resistance = SR1 + SR2 + SR3;
+            label5.Text = "R Total =" + resistance;
+            //this isthe calculation which is used to calculate the total resistance//
 
         }
 
@@ -67,6 +104,10 @@ namespace Assignment_2_Unit_35
                 PR3 = 0.0;
                 //if answer is not a whole number it will not be seem and will be an error//
             }
+
+            double resistance = 1 / ((1 / PR1) + (1 / PR2) + (1 / PR3));
+            label4.Text = "R Total =" + resistance;
+            //This is the calculation which is used to calculate the total resistance//
 
 
         }
