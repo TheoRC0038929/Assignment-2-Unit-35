@@ -21,5 +21,10 @@ namespace Assignment_2_Unit_35
         {
 
         }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
